@@ -16,7 +16,7 @@
            Footer=""
            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
            IsPullToRefreshEnabled="True"
-           IsRefreshing="{Binding ListRefreshing, Mode=OneWay}">
+           IsRefreshing="{Binding ListRefreshing, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="models:TestConfigModel">
                     <ViewCell Height="48">

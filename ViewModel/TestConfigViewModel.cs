@@ -29,20 +29,17 @@ namespace ListViewRefreshApp.ViewModel
         }
 
         private void RefreshListItems()
-        {
-            if (!ListRefreshing)
+        {            
+            try
             {
-                ListRefreshing = true;
-                try
-                {
-                    TestConfigList.Clear();
-                    ReloadFromSource();
-                }
-                finally
-                {
-                    ListRefreshing = false;
-                }
+                TestConfigList.Clear();
+                ReloadFromSource();
             }
+            finally
+            {
+                ListRefreshing = false;
+            }
+
         }
 
         public void LoadFromSource()
